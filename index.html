@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A deep dive into emotional and business dynamics of music using acoustic spectral analysis">
+  <title>Music Spectral Analysis for Emotion & Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background-color: #f9fafb;
+      color: #111827;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 2rem;
+      color: #374151;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      color: #4b5563;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    p, li {
+      margin: 0.5rem 0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Acoustic Spectral Analysis for Emotion and Business in Music</h1>
+      <p>By Chidhananda R.S. and Dr. Apurva Kulkarni</p>
+    </header>
+
+    <section>
+      <h2>Executive Summary</h2>
+      <p>This work explores how amplitude-frequency analysis of audio can reveal deep emotional traits in music and also explain listener engagement patterns across genres. By going beyond conventional sentiment-based and behavioral analytics, the research leverages spectral fingerprinting to derive emotion tags and business insights directly from sound waves. Experiments across Jazz, Pop, Hip-hop, and Rock establish the method’s value in both emotional cognition and music business analytics.</p>
+    </section>
+
+    <section>
+      <h2>Motivation</h2>
+      <p>Music influences emotions irrespective of language. Global popularity of non-native songs like Despacito and K-pop highlights a gap in traditional lyric/genre-based recommendation systems. A new approach is needed to model music as a cognitive experience.</p>
+    </section>
+
+    <section>
+      <h2>Research Questions</h2>
+      <ul>
+        <li>Can we detect emotional valence and arousal using only spectral data?</li>
+        <li>How do frequency patterns correlate with listener behavior across genres?</li>
+        <li>Can we build a universal music recommendation model independent of language or culture?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Literature Review</h2>
+      <ul>
+        <li>Traditional features: lyrics, tempo, rhythm, artist data, user skip/loop patterns</li>
+        <li>Modern ML/NLP: CNNs, RNNs, embedding models, sentiment mining</li>
+        <li>Cognitive studies: Emotion evocation via sound, neural response to musical frequencies</li>
+        <li>Gap: Subjectivity and bias in lyric-based or behavior-based models</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Dataset & Preprocessing</h2>
+      <ul>
+        <li><strong>Source:</strong> Free Music Archive</li>
+        <li><strong>Genres:</strong> Jazz, Pop, Rock, Hip-hop</li>
+        <li><strong>Listenership Bands:</strong> High (>100K), Moderate (50K–100K), Low (10K–50K), Very Low (<10K)</li>
+        <li><strong>Sampling:</strong> 44.1kHz, MP3 format, grouped by code to avoid bias</li>
+        <li><strong>Transformation:</strong> FFT to frequency domain, 160 frequency bins (100Hz each)</li>
+        <li><strong>Noise Removal:</strong> DC component subtracted via mean normalization</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Methodology</h2>
+      <h3>Generic Frequency Bins</h3>
+      <p>Top 50 bins with highest energy extracted for each song. The 35 most frequent bins across all songs (regardless of genre) identified as generic frequency bins, serving as universal indicators of emotional valence and commercial success.</p>
+
+      <h3>Genre-Specific Frequency Bins</h3>
+      <p>After removing generic bins, top 35 bins per genre identified to reveal unique genre-specific acoustic signatures. These capture stylistic differences and emotional nuances unique to Jazz, Pop, Rock, or Hip-hop.</p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <ul>
+        <li>High correlation between frequency bin overlap and listenership in Pop and Hip-hop</li>
+        <li>Jazz and Rock exhibit greater diversity, suggesting emotional perception is genre-dependent</li>
+        <li>Both generic and genre-specific bins capture emotional valence across listenership bands</li>
+        <li>Overlap of frequency bins positively correlates with listener engagement</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Emotion Detection & Tagging</h2>
+      <ul>
+        <li>Low-frequency + high amplitude → energy, joy, celebration</li>
+        <li>High-frequency + low amplitude → melancholy, nostalgia</li>
+        <li>Mid-frequency balance → peace, calm, flow</li>
+      </ul>
+      <p>Frequency tags can guide emotion-aware playlists and aid music therapy, education, and media scoring.</p>
+    </section>
+
+    <section>
+      <h2>Applications</h2>
+      <ul>
+        <li><strong>Artists:</strong> Audio balancing tools to optimize emotional impact</li>
+        <li><strong>Music Platforms:</strong> Emotion-first, language-agnostic recommendations</li>
+        <li><strong>Neuroscientists:</strong> Mapping audio bins to neural emotion circuits</li>
+        <li><strong>Business Analysts:</strong> Curate trend forecasts based on spectral analytics</li>
+        <li><strong>Educators & Therapists:</strong> Use frequency bins in cognitive development, therapy</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>This research presents a robust, frequency-based model to understand music emotions and business relevance. By grounding analysis in spectral traits instead of subjective signals, the system offers a more universal, scalable, and cognitively aligned view of music perception and consumption trends.</p>
+    </section>
+
+    <section>
+      <h2>Future Work</h2>
+      <ul>
+        <li>Incorporate valence-arousal mapping using labeled emotion datasets</li>
+        <li>Cross-cultural and multilingual audio spectrum analysis</li>
+        <li>Integration with EEG/fMRI studies for neural validation</li>
+        <li>Develop frequency-aware DAW plugins and emotion-feedback tools for composers</li>
+        <li>Real-time emotion monitoring and adaptive playlist generation</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Chidhananda R.S. & Apurva Kulkarni. All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
